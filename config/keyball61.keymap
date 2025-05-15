@@ -24,8 +24,7 @@
     quick-tap-ms = <150>;
 };
 
-//macros {
-
+macros {
 dot3winw11: dot3winw11 {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
