@@ -57,7 +57,7 @@ macros {
 };
 
 / {
-   combos {
+    combos {
         compatible = "zmk,combos";
 
         leftbackdouble {
@@ -111,14 +111,14 @@ macros {
 
         hangeuldouble {
             bindings = <&kp RIGHT_ALT>;
-            key-positions = <50 51>;
+            key-positions = <54 55>;
             timeout-ms = <50>;
             layers = <0>;
         };
 
         hanjadouble {
             bindings = <&kp RCTRL>;
-            key-positions = <51 52>;
+            key-positions = <55 56>;
             timeout-ms = <50>;
             layers = <0>;
         };
@@ -160,7 +160,7 @@ macros {
 
         closeprogram {
             bindings = <&kp LA(F4)>;
-            key-positions = <52 51 4>;
+            key-positions = <4 55 54>;
             timeout-ms = <50>;
             layers = <0>;
         };
@@ -181,7 +181,7 @@ macros {
 
         dot3win11ver {
             bindings = <&dot3winw11>;
-            key-positions = <47 57>;
+            key-positions = <47 48>;
             timeout-ms = <50>;
             layers = <0>;
         };
@@ -191,41 +191,6 @@ macros {
             key-positions = <22 23>;
             timeout-ms = <50>;
             layers = <0>;
-        };
-
-        second {
-            bindings = <&mo 2>;
-            key-positions = <53 54>;
-        };
-
-        L2f6 {
-            bindings = <&kp F6>;
-            key-positions = <1 13>;
-            layers = <1>;
-        };
-
-        L2f7 {
-            bindings = <&kp F7>;
-            key-positions = <2 14>;
-            layers = <1>;
-        };
-
-        L2F8 {
-            bindings = <&kp F8>;
-            key-positions = <3 15>;
-            layers = <1>;
-        };
-
-        L2F10 {
-            bindings = <&kp F10>;
-            key-positions = <17 5>;
-            layers = <1>;
-        };
-
-        L2F9 {
-            bindings = <&kp F9>;
-            key-positions = <16 4 0 1 2 12 13 14>;
-            layers = <1>;
         };
     };
 
