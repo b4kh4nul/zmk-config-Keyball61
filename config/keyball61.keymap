@@ -61,7 +61,7 @@ macros {
         compatible = "zmk,combos";
 
         ds {
-            bindings = <&none>;
+            bindings = <&kp C>;
             key-positions = <2 1>;
         };
     };
