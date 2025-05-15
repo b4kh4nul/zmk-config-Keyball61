@@ -25,257 +25,249 @@
 };
 
 //macros {
-    dot3: dot3 {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings =
-            <&macro_press>,
-            <&kp LEFT_ALT>,
-            <&macro_wait_time 10>,
-            <&macro_tap>,
-            <&kp KP_NUMBER_4 &kp KP_NUMBER_1 &kp KP_NUMBER_3 &kp KP_NUMBER_8 &kp KP_NUMBER_2>,
-            <&macro_release>,
-            <&kp LEFT_ALT>;
 
-        label = "DOT3";
-    };
+dot3winw11: dot3winw11 {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings =
+        <&macro_press>,
+        <&kp LEFT_ALT>,
+        <&macro_wait_time 10>,
+        <&macro_tap>,
+        <&kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp KP_NUMBER_3 &kp KP_NUMBER_3>,
+        <&macro_release>,
+        <&kp LEFT_ALT>;
 
-    dot3winw11: dot3winw11 {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings =
-            <&macro_press>,
-            <&kp LEFT_ALT>,
-            <&macro_wait_time 10>,
-            <&macro_tap>,
-            <&kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp KP_NUMBER_3 &kp KP_NUMBER_3>,
-            <&macro_release>,
-            <&kp LEFT_ALT>;
+    label = "DOT3WINW11";
+};
 
-        label = "DOT3WINW11";
-    };
 };
 
 / {
-    combos {
-        compatible = "zmk,combos";
 
-        leftbackdouble {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <0 1>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
+combos {
+    compatible = "zmk,combos";
 
-        leftdeletedouble {
-            bindings = <&kp DELETE>;
-            key-positions = <12 13>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        f1double {
-            bindings = <&kp F1>;
-            key-positions = <13 1>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        f2double {
-            bindings = <&kp F2>;
-            key-positions = <2 14>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        f3double {
-            bindings = <&kp F3>;
-            key-positions = <3 15>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        f4double {
-            bindings = <&kp F4>;
-            key-positions = <4 16>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        f5double {
-            bindings = <&kp F5>;
-            key-positions = <5 17>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        hangeuldouble {
-            bindings = <&kp RIGHT_ALT>;
-            key-positions = <54 55>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        hanjadouble {
-            bindings = <&kp RCTRL>;
-            key-positions = <55 56>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        leftdouble6 {
-            bindings = <&kp NUMBER_6>;
-            key-positions = <1 2>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        leftdouble7 {
-            bindings = <&kp N7>;
-            key-positions = <2 3>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        leftdouble8 {
-            bindings = <&kp N8>;
-            key-positions = <4 3>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        leftdouble9 {
-            bindings = <&kp N9>;
-            key-positions = <4 5>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        leftdouble0 {
-            bindings = <&kp N0>;
-            key-positions = <17 5 16 4>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        closeprogram {
-            bindings = <&kp LA(F4)>;
-            key-positions = <4 55 54>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        minus {
-            bindings = <&kp MINUS>;
-            key-positions = <9 21>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        plus {
-            bindings = <&kp EQUAL>;
-            key-positions = <10 22>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        dot3win11ver {
-            bindings = <&dot3winw11>;
-            key-positions = <47 48>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        colon {
-            bindings = <&kp SEMI>;
-            key-positions = <22 23>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
+    leftbackdouble {
+        bindings = <&kp BACKSPACE>;
+        key-positions = <0 1>;
+        timeout-ms = <50>;
+        layers = <0>;
     };
 
-    macros {
+    leftdeletedouble {
+        bindings = <&kp DELETE>;
+        key-positions = <12 13>;
+        timeout-ms = <50>;
+        layers = <0>;
     };
 
-    keymap {
-        compatible = "zmk,keymap";
+    f1double {
+        bindings = <&kp F1>;
+        key-positions = <13 1>;
+        timeout-ms = <50>;
+        layers = <0>;
+    };
 
-        default_layer {
-            label = "QWRT";
-            bindings = <
+    f2double {
+        bindings = <&kp F2>;
+        key-positions = <2 14>;
+        timeout-ms = <50>;
+        layers = <0>;
+    };
+
+    f3double {
+        bindings = <&kp F3>;
+        key-positions = <3 15>;
+        timeout-ms = <50>;
+        layers = <0>;
+    };
+
+    f4double {
+        bindings = <&kp F4>;
+        key-positions = <4 16>;
+        timeout-ms = <50>;
+        layers = <0>;
+    };
+
+    f5double {
+        bindings = <&kp F5>;
+        key-positions = <5 17>;
+        timeout-ms = <50>;
+        layers = <0>;
+    };
+
+    hangeuldouble {
+        bindings = <&kp RIGHT_ALT>;
+        key-positions = <54 55>;
+        timeout-ms = <50>;
+        layers = <0>;
+    };
+
+    hanjadouble {
+        bindings = <&kp RCTRL>;
+        key-positions = <55 56>;
+        timeout-ms = <50>;
+        layers = <0>;
+    };
+
+    leftdouble6 {
+        bindings = <&kp NUMBER_6>;
+        key-positions = <1 2>;
+        timeout-ms = <50>;
+        layers = <0>;
+    };
+
+    leftdouble7 {
+        bindings = <&kp N7>;
+        key-positions = <2 3>;
+        timeout-ms = <50>;
+        layers = <0>;
+    };
+
+    leftdouble8 {
+        bindings = <&kp N8>;
+        key-positions = <4 3>;
+        timeout-ms = <50>;
+        layers = <0>;
+    };
+
+    leftdouble9 {
+        bindings = <&kp N9>;
+        key-positions = <4 5>;
+        timeout-ms = <50>;
+        layers = <0>;
+    };
+
+    leftdouble0 {
+        bindings = <&kp N0>;
+        key-positions = <17 5 16 4>;
+        timeout-ms = <50>;
+        layers = <0>;
+    };
+
+    closeprogram {
+        bindings = <&kp LA(F4)>;
+        key-positions = <4 55 54>;
+        timeout-ms = <50>;
+        layers = <0>;
+    };
+
+    minus {
+        bindings = <&kp MINUS>;
+        key-positions = <9 21>;
+        timeout-ms = <50>;
+        layers = <0>;
+    };
+
+    plus {
+        bindings = <&kp EQUAL>;
+        key-positions = <10 22>;
+        timeout-ms = <50>;
+        layers = <0>;
+    };
+
+    dot3win11ver {
+        bindings = <&dot3winw11>;
+        key-positions = <47 48>;
+        timeout-ms = <50>;
+        layers = <0>;
+    };
+
+    colon {
+        bindings = <&kp SEMI>;
+        key-positions = <22 23>;
+        timeout-ms = <50>;
+        layers = <0>;
+    };
+};
+
+macros {
+};
+
+macros {
+};
+
+keymap {
+    compatible = "zmk,keymap";
+
+    default_layer {
+        label = "QWRT";
+        bindings = <
 &mt ESC GRAVE  &kp N1          &kp N2  &kp N3        &kp N4  &kp N5                                  &kp N6             &kp N7  &kp N8     &kp N9   &kp N0         &kp BSPC
 &kp TAB        &kp Q           &kp W   &kp E         &kp R   &kp T                                   &kp Y              &kp U   &kp I      &kp O    &kp P          &kp DELETE
 &kp ENTER      &kp A           &kp S   &kp D         &kp F   &kp G                                   &kp H              &kp J   &kp K      &kp L    &kp SQT        &kp ENTER
 &kp LCTRL      &kp LEFT_SHIFT  &kp Z   &kp X         &kp C   &kp V         &kp B      &kp B          &kp N              &kp M   &kp COMMA  &kp DOT  &kp FSLH       &kp RIGHT_SHIFT
 &none          &none           &trans  &kp LEFT_WIN  &mo 1   &kp LEFT_ALT  &kp SPACE  &kp RIGHT_ALT  &kp RIGHT_CONTROL                              &kp RIGHT_ALT  &kp DELETE
-            >;
-        };
+        >;
+    };
 
-        number_layer {
-            bindings = <
+    number_layer {
+        bindings = <
 &trans  &kp NUMBER_6    &kp N7        &kp N8     &kp N9  &kp N0                           &kp F6  &kp F7  &kp F9  &kp F10  &kp F11  &kp F12
 &none   &trans          &kp UP_ARROW  &trans     &trans  &kp Y                            &trans  &trans  &trans  &trans   &trans   &kp PRINTSCREEN
 &trans  &kp LEFT        &kp DOWN      &kp RIGHT  &none   &trans                           &trans  &trans  &trans  &trans   &trans   &kp LG(LS(S))
 &mo 2   &kp LEFT_SHIFT  &kp N         &kp COMMA  &trans  &trans        &kp LG(H)  &trans  &trans  &trans  &trans  &trans   &trans   &mo 2
 &trans  &trans          &trans        &trans     &trans  &kp LEFT_ALT  &trans     &trans  &trans                           &trans   &trans
-            >;
+        >;
 
-            label = "NUM";
-        };
+        label = "NUM";
+    };
 
-        symbol_layer {
-            label = "SYM";
-            bindings = <
+    symbol_layer {
+        label = "SYM";
+        bindings = <
 &bt BT_CLR_ALL  &bt BT_SEL 0    &bt BT_SEL 1    &trans           &trans          &trans                  &trans  &trans  &trans  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR_ALL
 &msc SCRL_UP    &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &msc SCRL_UP    &trans                  &trans  &trans  &trans  &trans        &trans        &trans
 &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN  &trans                  &trans  &trans  &trans  &trans        &trans        &trans
 &trans          &trans          &trans          &trans           &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans        &trans
 &trans          &trans          &trans          &trans           &trans          &trans  &trans  &trans  &trans                                &trans        &trans
-            >;
-        };
+        >;
+    };
 
-        function_layer {
-            label = "FUN";
-            bindings = <
+    function_layer {
+        label = "FUN";
+        bindings = <
 &trans  &trans  &trans   &trans   &trans   &trans                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp F1  &kp F2   &kp F3   &kp F4   &trans                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp F5  &kp F6   &kp F7   &kp F8   &trans                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans   &trans   &trans   &trans  &trans  &trans  &trans                          &trans  &trans
-            >;
-        };
+        >;
+    };
 
-        mouse_layer {
-            label = "MOUSE";
-            bindings = <
+    mouse_layer {
+        label = "MOUSE";
+        bindings = <
 &trans  &trans    &trans    &trans  &trans     &trans                  &trans         &trans     &trans  &trans     &trans     &trans
 &trans  &trans    &trans    &trans  &trans     &trans                  &trans         &trans     &trans  &trans     &trans     &trans
 &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans                  &kp PAGE_UP    &mkp LCLK  &trans  &mkp RCLK  &mkp MCLK  &trans
 &trans  &trans    &trans    &trans  &trans     &trans  &trans  &trans  &kp PAGE_DOWN  &trans     &trans  &trans     &trans     &trans
 &trans  &trans    &trans    &trans  &trans     &trans  &trans  &trans  &mo 3                                        &trans     &trans
-            >;
-        };
-
-        scroll_layer {
-            label = "SCROLL";
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans
-            >;
-        };
-
-        snipe_layer {
-            label = "SNIPE";
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans
-            >;
-        };
+        >;
     };
+
+    scroll_layer {
+        label = "SCROLL";
+        bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans
+        >;
+    };
+
+    snipe_layer {
+        label = "SNIPE";
+        bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans
+        >;
+    };
+};
+
 };
