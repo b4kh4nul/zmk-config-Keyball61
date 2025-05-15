@@ -24,7 +24,7 @@
     quick-tap-ms = <150>;
 };
 
-macros {
+//macros {
     dot3: dot3 {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
