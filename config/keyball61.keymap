@@ -24,41 +24,51 @@
     quick-tap-ms = <150>;
 };
 
+macros {
+    dot3: dot3 {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings =
+            <&macro_press>,
+            <&kp LEFT_ALT>,
+            <&macro_wait_time 10>,
+            <&macro_tap>,
+            <&kp KP_NUMBER_4 &kp KP_NUMBER_1 &kp KP_NUMBER_3 &kp KP_NUMBER_8 &kp KP_NUMBER_2>,
+            <&macro_release>,
+            <&kp LEFT_ALT>;
 
+        label = "DOT3";
+    };
 
-    macros {
-        dot3: dot3 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT>,
-                <&macro_wait_time 10>,
-                <&macro_tap>,
-                <&kp KP_NUMBER_4 &kp KP_NUMBER_1 &kp KP_NUMBER_3 &kp KP_NUMBER_8 &kp KP_NUMBER_2>,
-                <&macro_release>,
-                <&kp LEFT_ALT>;
+    dot3winw11: dot3winw11 {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings =
+            <&macro_press>,
+            <&kp LEFT_ALT>,
+            <&macro_wait_time 10>,
+            <&macro_tap>,
+            <&kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp KP_NUMBER_3 &kp KP_NUMBER_3>,
+            <&macro_release>,
+            <&kp LEFT_ALT>;
 
-            label = "DOT3";
-        };
+        label = "DOT3WINW11";
+    };
+};
 
-        dot3winw11: dot3winw11 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT>,
-                <&macro_wait_time 10>,
-                <&macro_tap>,
-                <&kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp KP_NUMBER_3 &kp KP_NUMBER_3>,
-                <&macro_release>,
-                <&kp LEFT_ALT>;
+/ {
+    combos {
+        compatible = "zmk,combos";
 
-            label = "DOT3WINW11";
+        ds {
+            bindings = <&none>;
+            key-positions = <2 1>;
         };
     };
 
-/ {
+    macros {
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
