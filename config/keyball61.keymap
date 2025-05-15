@@ -12,35 +12,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-&lt {
-    tapping-term-ms = <240>;
-    flavor = "balanced";
-    quick-tap-ms = <150>;
-};
-
-&mt {
-    tapping-term-ms = <200>;
-    flavor = "tap-preferred";
-    quick-tap-ms = <150>;
-};
-
-macros {
-    dot3winw11: dot3winw11 {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings =
-            <&macro_press>,
-            <&kp LEFT_ALT>,
-            <&macro_wait_time 10>,
-            <&macro_tap>,
-            <&kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp KP_NUMBER_3 &kp KP_NUMBER_3>,
-            <&macro_release>,
-            <&kp LEFT_ALT>;
-
-        label = "DOT3WINW11";
-    };
-};
-
 / {
     combos {
         compatible = "zmk,combos";
@@ -178,12 +149,24 @@ macros {
             layers = <0>;
         };
     };
+ 
+macros {
+    dot3winw11: dot3winw11 {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings =
+            <&macro_press>,
+            <&kp LEFT_ALT>,
+            <&macro_wait_time 10>,
+            <&macro_tap>,
+            <&kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp KP_NUMBER_3 &kp KP_NUMBER_3>,
+            <&macro_release>,
+            <&kp LEFT_ALT>;
 
-    macros {
+        label = "DOT3WINW11";
     };
+};
 
-    macros {
-    };
 
     keymap {
         compatible = "zmk,keymap";
