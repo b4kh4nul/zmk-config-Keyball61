@@ -217,7 +217,7 @@
 
         layer_4 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans     &trans          &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans     &trans          &trans     &trans  &kp BACKSPACE
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans     &msc SCRL_DOWN  &mkp RCLK  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &mkp LCLK  &msc SCRL_UP    &mkp RCLK  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &mkp MCLK       &mkp RCLK  &trans  &trans
